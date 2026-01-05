@@ -1,3 +1,27 @@
+const Goods = function (name, cost, discount = 0){
+    this.name = name;
+    this.cost = cost;
+    this.discont = discount;
+}
+
+const FoodGoods = function (name, cost, discount = 0, calories)
+{
+    Goods.call(this, name, cost, discount);
+    this.calories = calories;
+}
+
+const СlothingGoods = function (name, cost, discount = 0, material)
+{
+    Goods.call(this, name, cost, discount);
+    this.material = material;
+}
+
+const TechnicsGoods = function (name, cost, discount = 0, type)
+{
+    Goods.call(this, name, cost, discount);
+    this.type = type;
+}
+
 const cart = {
     items: [],
     totalPrice: 0,
